@@ -39,6 +39,7 @@ body {
 
 .content_box .content {
     display: none;
+    animation: moving .5s ease;
 }
 
 .content_box .content.active {
@@ -58,4 +59,15 @@ body {
     left: 36px;
     background-color: #007aff;
     transition: all .3s ease-in-out ;
+}
+
+@keyframes moving {
+    from{
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
